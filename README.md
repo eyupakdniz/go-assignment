@@ -1,5 +1,5 @@
 
-### [go-redis](https://github.com/eyupakdniz/go-assignment/tree/main/go-redis)
+### [go-redis-docker](https://github.com/eyupakdniz/go-assignment/tree/main/go-redis)
 I used Docker to send a JSON formatted file to Redis using Golang. I utilized the `github.com/redis/go-redis/v9` package for Redis interactions. The coordination between Dockerfile and docker-compose was established.
 
 ### [json-file](https://github.com/eyupakdniz/go-assignment/tree/main/json-file)
