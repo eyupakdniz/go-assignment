@@ -43,7 +43,11 @@ func main() {
 	"service/voltha/omci_mibs/go_templates",
 	"aaaabbbbbbcccxcccc"}
 	
-	//write
+	write(str)
+	read()
+}
+
+func write(str LogData){
 	content, err := json.Marshal(str)
 	if err != nil {
 		log.Fatal(err)
@@ -52,17 +56,18 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
 
-	//read
-	content, err = ioutil.ReadFile("file.json") //content içindekiler byte dizisidir.
+func read(){
+	veri, err := ioutil.ReadFile("file.json") //content içindekiler byte dizisidir.
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(string(content))
+	fmt.Println(string(veri)) 
 
 	data := LogData{}
-	err = json.Unmarshal(content, &data)
+	err = json.Unmarshal(veri, &data)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -73,5 +78,4 @@ func main() {
 	jsonByte, _ := json.Marshal(data)
 	fmt.Println(string(jsonByte))*/
 }
-
 
